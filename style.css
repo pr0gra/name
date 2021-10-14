@@ -1,28 +1,39 @@
 @font-face {
-  font-family: "Heebo-Light";
-  src: url(assets/fonts/Heebo-Light.woff2) format("woff2");
+  font-family: 'Heebo-Light';
+  src: url(assets/fonts/Heebo-Light.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Heebo-Medium";
-  src: url(assets/fonts/Heebo-Medium.woff2) format("woff2");
+  font-family: 'Heebo-Medium';
+  src: url(assets/fonts/Heebo-Medium.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Heebo-Bold";
-  src: url(assets/fonts/Heebo-Bold.woff2) format("woff2");
+  font-family: 'Heebo-Bold';
+  src: url(assets/fonts/Heebo-Bold.woff2) format('woff2');
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   font-family: Heebo-Light, Heebo-Medium, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
+  width: 100%;
   max-width: 1152px;
   margin: 0 auto;
 }
 
-.header {
-  height: 100px;
+h1 {
+  font-family: Heebo-Bold;
 }
 
 .header-list {
@@ -41,17 +52,32 @@ body {
   color: black;
 }
 
-.tommy-left-part {
-  width: 497px;
-  height: 245px;
-  margin-left: 148px;
-}
-
 .tommy_text {
   font-family: Heebo-Light;
 }
 
+.Tommy-style {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  margin-bottom: 58px;
+}
+
+.Tommy-style h1,
+.Tommy-style p {
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-bottom: 43px;
+}
+
 .button-tommy {
+  display: block;
   width: 208px;
   height: 47px;
   background-color: #ff6464;
@@ -61,22 +87,47 @@ body {
   cursor: pointer;
   font-size: 20px;
   border-radius: 2px;
+  margin: 0 auto;
 }
 
-.Tommy-style {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 145px;
-  padding-bottom: 71px;
+.tommy-left-part {
+  margin: 0 auto;
+  max-width: 497px;
 }
+
+@media (min-width: 768px) {
+  .Tommy-style {
+    flex-direction: row;
+    margin-bottom: 71px;
+  }
+
+  .Tommy-style h1,
+  .Tommy-style p {
+    text-align: left;
+  }
+
+  .image {
+    width: 243px;
+    height: 243px;
+    margin: 0;
+  }
+
+  .button-tommy,
+  .tommy-left-part {
+    margin: 0;
+  }
+}
+
+/*
+Можно использовать вместо flex-direction: column-reverse;
 
 .image {
-  margin-right: 149px;
+  order: -1;
 }
+*/
 
 .second-part {
   /* position: absolute; */
-  width: 1152px;
   height: 396px;
   left: 0;
   background: #edf7fa;
@@ -87,11 +138,6 @@ body {
 .second-part-left {
   display: flex;
   justify-content: space-between;
-}
-
-.second-part-left > div {
-  margin-left: 148px;
-  margin-right: 148px;
 }
 
 .window-center {
@@ -130,7 +176,6 @@ body {
 }
 
 .line {
-  width: 856px;
   background-color: #e0e0e0;
   height: 2px;
   margin-bottom: 15px;
@@ -211,21 +256,46 @@ body {
 }
 
 footer {
-  width: 1152px;
   height: 182px;
   margin-top: 83px;
   text-align: center;
 }
 
-footer ul{
+footer ul {
   list-style-type: none;
   display: inline-block;
 }
 
 footer ul li {
-  float:left;
+  float: left;
   margin-right: 35px;
 }
 
+/* MEDIA QUERIES */
 
+/* 0 до 768px */
+.desktop-header {
+  height: 100px;
+  background-color: green;
+}
 
+/* 768px и выше */
+@media (min-width: 768px) {
+  .desktop-header {
+    background-color: red;
+  }
+}
+
+/* 1024px и выше */
+@media (min-width: 1024px) {
+  .desktop-header {
+    background-color: blue;
+  }
+}
+
+/* 1440px и выше */
+@media (min-width: 1440px) {
+  .desktop-header {
+    background-color: purple;
+  }
+}

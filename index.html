@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="desktop-header">
       <ul class="header-list">
         <li><a href="/Works">Works</a></li>
         <li><a href="/Block">Block</a></li>
         <li><a href="/Contact">Contact</a></li>
       </ul>
     </header>
+    <header class="mobile-header">
+      <button class="menu">
+        <img src="assets/menu.svg" alt="" />
+      </button>
+    </header>
 
     <div class="Tommy-style">
       <div class="tommy-left-part">
-        <h1 style="font-family: Heebo-Bold">
-          Hi, I am John, Creative Technologist
-        </h1>
+        <h1>Hi, I am John, Creative Technologist</h1>
         <p>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -29,9 +32,7 @@
         <button class="button-tommy">Download Resume</button>
       </div>
 
-      <div class="image">
-        <img src="assets/tommy.svg" alt="Tommy" />
-      </div>
+      <img class="image" src="assets/tommy.svg" alt="Tommy" />
     </div>
     <div class="second-part">
       <div class="second-part-left">
@@ -78,7 +79,7 @@
         </div>
       </div>
     </div>
-    <Featured_works class="Featured">
+    <div class="Featured">
       <p class="featured_works_first_text">Featured works</p>
       <div class="featured-first">
         <img src="assets/Dashboards.svg" alt="Dashboards" />
@@ -130,18 +131,21 @@
         </div>
       </div>
       <div class="line"></div>
-    </Featured_works>
+    </div>
     <footer>
       <ul>
-        <li><a href=""><img src="assets/fb.svg" alt="facebook"></a></li>
-        <li><a href=""><img src="assets/insta.svg" alt="insta"></a></li>
-        <li><a href=""><img src="assets/tw.svg" alt="tw"></a></li>
-        <li><a href=""><img src="assets/Linkedin.svg" alt="in"></a></li>
-
-        <!-- <a href=""><img src="assets/fb.svg" alt="" /></a>
-        <a href=""><img src="assets/insta.svg" alt="" /></a>
-        <a href=""><img src="assets/tw.svg" alt="" /></a>
-        <a href=""><img src="assets/Linkedin.svg" alt="" /></a> -->
+        <li>
+          <a href="/Facebook"><img src="assets/fb.svg" alt="facebook" /></a>
+        </li>
+        <li>
+          <a href="/Instagram"><img src="assets/insta.svg" alt="insta" /></a>
+        </li>
+        <li>
+          <a href="/Twitter"><img src="assets/tw.svg" alt="tw" /></a>
+        </li>
+        <li>
+          <a href="/Linkedin"><img src="assets/Linkedin.svg" alt="in" /></a>
+        </li>
       </ul>
       <p>Copyright ©2020 All rights reserved</p>
     </footer>
