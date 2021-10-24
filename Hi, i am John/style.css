@@ -345,6 +345,9 @@ footer ul li {
     visibility: hidden;
   }
 
+  .menu {
+    float: right;
+  }
 }
 
 /* 768px и выше */
